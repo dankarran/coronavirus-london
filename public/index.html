@@ -20,19 +20,42 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Coronavirus in London</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mr-auto">
-            </ul>
-        </div>
     </nav>
 
     <main role="main" class="">
         <div class="container">
             <div id="app">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p class="lead">Estimate the number Coronavirus cases that may have occurred across London.</p>
+                        <p>The estimates shown in the chart and in the summary are based on the actual death counts provided by the NHS, applying your chosen assumptions for the fatality rate and amount of time between catching the virus and sadly passing away from it.</p>
+                        <p><small><em>Data updated {{ dataUpdated }}</em></small></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-light" id="options">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="fatality">Estimated fatality rate</label>
+                                            <select class="form-control" id="fatality" v-model="fatality" v-on:change="updateExtrapolation">
+                                                <option v-for="option in fatalityOptions" :value="option.value">{{ option.label }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="delay">Estimated time from infection to death</label>
+                                            <select class="form-control" id="delay" v-model="delay" v-on:change="updateExtrapolation">
+                                                <option v-for="option in delayOptions" :value="option.value">{{ option.label }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-8">
                         <div id="chart-wrapper">
@@ -41,7 +64,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
                                         Confirmed cases
@@ -53,7 +76,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
                                         Deaths occuring
@@ -67,7 +90,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
                                         Estimated cases
@@ -79,7 +102,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
                                         Estimated population %
@@ -87,43 +110,6 @@
                                     <div class="card-body">
                                         <div class="stat">
                                             {{ stats.populationPercent }}%
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card bg-light" id="options">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label>
-                                                        <!-- <input type="checkbox" class="form-control" v-model="displayCaseExtrapolation" v-on:change="updateExtrapolation"> -->
-                                                        Estimate previous cases based on actual death counts, using fatality rate and delay from infection
-                                                    </label>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-sm-6 col-lg-12">
-                                                        <div class="form-group">
-                                                            <label for="fatality">Estimated fatality rate</label>
-                                                            <select class="form-control" id="fatality" v-model="fatality" v-on:change="updateExtrapolation">
-                                                                <option v-for="option in fatalityOptions" :value="option.value">{{ option.label }}</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6 col-lg-12">
-                                                        <div class="form-group">
-                                                            <label for="delay">Estimated time from infection to death</label>
-                                                            <select class="form-control" id="delay" v-model="delay" v-on:change="updateExtrapolation">
-                                                                <option v-for="option in delayOptions" :value="option.value">{{ option.label }}</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +125,7 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-sm-12">
-                    <small><span class="text-muted">Built by <a href="https://www.dankarran.com">Dan Karran</a></span></small>
+                    <small><span class="text-muted">Built by <a href="https://www.dankarran.com">Dan Karran</a>. <a href="http://github.com/dankarran/coronavirus-london">GitHub</a>.</span></small>
                 </div>
             </div>
         </div>
