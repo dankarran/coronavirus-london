@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2020-03-04",
+    "display_at": 0,
+    "description": "Guidelines released on social distancing published"
+  },
+  {
+    "date": "2020-03-12",
+    "display_at": 0,
+    "description": "Track and trace stopped"
+  },
+  {
+    "date": "2020-03-16",
+    "display_at": 0,
+    "description": "Change from Contain to Delay phase"
+  },
+  {
+    "date": "2020-03-16",
+    "display_at": 0,
+    "description": "Social distancing recommended"
+  },
+  {
+    "date": "2020-03-24",
+    "display_at": 0,
+    "description": "Lockdown starts"
+  },
+  {
+    "date": "2020-05-13",
+    "display_at": 0,
+    "description": "Lockdown easing to allow unlimited exercise and meeting 1 person"
+  }
+]
