@@ -1,5 +1,7 @@
 let data = {
 
+    dataUpdated: '22 May 2020',
+
     /* Extrapolation setup */
     displayCaseExtrapolation: true,
     fatality: 2,
