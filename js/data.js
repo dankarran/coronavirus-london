@@ -251,8 +251,32 @@ let data = {
                 }
             ]
         },
+        legend: {
+            position: 'bottom',
+            labels: {
+                boxWidth: 12
+            }
+        },
         tooltips: {
-            mode: 'index'
+            mode: 'index',
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label === 'Events') {
+                        // TODO: get details
+                        label += ' (see below)';
+                    }
+                    else {
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += tooltipItem.yLabel;
+                    }
+
+                    return label;
+                }
+            }
         }
     },
     sources: {
@@ -262,10 +286,10 @@ let data = {
             fields: [
                 {
                     name: 'cases',
-                    label: 'Daily confirmed cases',
+                    label: 'Confirmed cases',
                     options: {
-                        backgroundColor: '#8bb9ff',
-                        order: 2
+                        backgroundColor: '#007bff',
+                        order: 0
                     }
                 }
             ]
@@ -276,10 +300,26 @@ let data = {
             fields: [
                 {
                     name: 'deaths_occurence',
-                    label: 'Daily deaths',
+                    label: 'Deaths',
                     options: {
-                        backgroundColor: '#ff931f',
-                        order: 4
+                        backgroundColor: '#ffc107',
+                        order: 2
+                    }
+                }
+            ]
+        },
+        events: {
+            url: './data/events.json',
+            key: 'date',
+            fields: [
+                {
+                    name: 'display_at',
+                    label: 'Events',
+                    options: {
+                        type: 'line',
+                        showLine: false,
+                        backgroundColor: '#8223ff',
+                        order: 3
                     }
                 }
             ]
@@ -291,7 +331,7 @@ let data = {
                 fields: [
                     {
                         name: 'percent',
-                        label: 'TfL tube usage',
+                        label: 'TfL Tube usage',
                         options: {
                             type: 'line',
                             backgroundColor: '#fff',
@@ -300,7 +340,7 @@ let data = {
                             fill: false,
                             pointRadius: 0,
                             yAxisID: 'right',
-                            order: 0
+                            order: 4
                         }
                     }
                 ]
@@ -311,7 +351,7 @@ let data = {
                 fields: [
                     {
                         name: 'percent',
-                        label: 'CityMapper Mobility Index',
+                        label: 'Citymapper Mobility Index',
                         options: {
                             type: 'line',
                             backgroundColor: '#fff',
@@ -321,28 +361,11 @@ let data = {
                             fill: false,
                             pointRadius: 0,
                             yAxisID: 'right',
-                            order: 1
-                        }
-                    }
-                ]
-            }
-            /* ,
-            {
-                url: './data/events.json',
-                key: 'date',
-                fields: [
-                    {
-                        name: 'display_at',
-                        label: 'Events',
-                        options: {
-                            type: 'line',
-                            showLine: false,
-                            backgroundColor: '#8223ff',
                             order: 5
                         }
                     }
                 ]
-            } */
+            }
         ]
     },
 
@@ -352,5 +375,8 @@ let data = {
         deaths: null,
         casesExtrapolated: null,
         populationPercent: null
-    }
+    },
+
+    /* Event data storage */
+    eventsData: []
 };

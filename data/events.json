@@ -1,8 +1,18 @@
 [
   {
+    "date": "2020-02-11",
+    "display_at": 0,
+    "description": "First case confirmed in London"
+  },
+  {
     "date": "2020-03-04",
     "display_at": 0,
-    "description": "Guidelines released on social distancing published"
+    "description": "Guidelines on social distancing published"
+  },
+  {
+    "date": "2020-03-11",
+    "display_at": 0,
+    "description": "Londoners start reducing Tube travel"
   },
   {
     "date": "2020-03-12",
@@ -12,17 +22,32 @@
   {
     "date": "2020-03-16",
     "display_at": 0,
-    "description": "Change from Contain to Delay phase"
-  },
-  {
-    "date": "2020-03-16",
-    "display_at": 0,
-    "description": "Social distancing recommended"
+    "description": "Social distancing recommended, change from Contain to Delay phase"
   },
   {
     "date": "2020-03-24",
     "display_at": 0,
     "description": "Lockdown starts"
+  },
+  {
+    "date": "2020-03-27",
+    "display_at": 0,
+    "description": "Boris Johnson and Matt Hancock test positive"
+  },
+  {
+    "date": "2020-04-04",
+    "display_at": 0,
+    "description": "Boris Johnson admitted to hospital"
+  },
+  {
+    "date": "2020-04-10",
+    "display_at": 0,
+    "description": "Good Friday Bank Holiday"
+  },
+  {
+    "date": "2020-05-08",
+    "display_at": 0,
+    "description": "VE Day Bank Holiday"
   },
   {
     "date": "2020-05-13",
