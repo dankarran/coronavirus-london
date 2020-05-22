@@ -11,8 +11,8 @@ The estimates shown in the chart and in the summary are based on the actual deat
 ## How is the dataset calculated?
 
  * Assumptions
-   * 1% fatality rate
-   * 3 week delay from infection to death
+   * 1% fatality rate (customisable)
+   * 3 week delay from infection to death (customisable)
  * Data
    * 201 deaths on 1 April according to NHS data
  * Calculation
