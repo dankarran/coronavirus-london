@@ -421,7 +421,7 @@
   },
   {
     "date": "2020-05-16",
-    "deaths_occurence": 12
+    "deaths_occurence": 13
   },
   {
     "date": "2020-05-17",
@@ -433,10 +433,14 @@
   },
   {
     "date": "2020-05-19",
-    "deaths_occurence": 7
+    "deaths_occurence": 10
   },
   {
     "date": "2020-05-20",
-    "deaths_occurence": 2
+    "deaths_occurence": 13
+  },
+  {
+    "date": "2020-05-21",
+    "deaths_occurence": 1
   }
 ]
