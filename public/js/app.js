@@ -23,6 +23,7 @@ let vm = new Vue({
 
             this.addSource(data.sources.cases, 'cases');
             this.addSource(data.sources.deaths, 'deaths');
+            this.addSource(data.sources.events, 'events');
 
             for (let index in data.sources.other) {
                 this.addSource(data.sources.other[index], 'other');
@@ -56,10 +57,18 @@ let vm = new Vue({
                                 }
                             }
                             total = total + value;
+
                             dataset.data.push(value);
                         }
 
-                        if (type === 'cases') {
+                        // Push to chart
+                        let datasetIndex = data.chartData.datasets.push(dataset) - 1;
+
+                        if (type === 'events') {
+                            data.eventsIndex = datasetIndex;
+                            vm.eventsData = response.data;
+                        }
+                        else if (type === 'cases') {
                             vm.stats.cases = total;
                         }
                         else if (type === 'deaths') {
@@ -69,9 +78,6 @@ let vm = new Vue({
                             vm.extrapolationSourceDataset = dataset;
                             vm.updateExtrapolation();
                         }
-
-                        // Push to chart
-                        let datasetIndex = data.chartData.datasets.push(dataset) - 1;
 
                         // Update chart with new data
                         vm.chart.update();
@@ -92,7 +98,8 @@ let vm = new Vue({
                 let dataset = {
                     label: 'Estimated cases',
                     data: [],
-                    backgroundColor: '#59e280'
+                    backgroundColor: '#8d969e',
+                    order: 1
                 };
                 this.extrapolationIndex = data.chartData.datasets.push(dataset) - 1;
                 this.extrapolationAdded = true;
