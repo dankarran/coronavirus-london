@@ -90,7 +90,7 @@ let vm = new Vue({
             if (!this.extrapolationAdded) {
                 // TODO: move config to data.js
                 let dataset = {
-                    label: 'Extrapolated cases',
+                    label: 'Estimated cases',
                     data: [],
                     backgroundColor: '#59e280'
                 };
