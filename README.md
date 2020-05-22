@@ -2,6 +2,10 @@
 
 Estimate the number Coronavirus cases that may have occurred across London.
 
+![Chart preview](https://dankarran.github.io/coronavirus-london/images/coronavirus-london-preview.png)
+
+[:link: Visit the Coronavirus in London tool](https://dankarran.github.io/coronavirus-london/)
+
 The estimates shown in the chart and in the summary are based on the actual death counts provided by the NHS, applying your chosen assumptions for the fatality rate and amount of time between catching the virus and sadly passing away from it.
 
 ## How is the dataset calculated?
