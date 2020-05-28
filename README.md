@@ -19,16 +19,16 @@ The estimates shown in the chart and in the summary are based on the actual deat
    * 20,100 infections
    * 21 days earlier on 11 March
 
+## Data Sources
+
+See `README.md` file in each data directory.
+
 ## Author
 
 Dan Karran
 
  * [@dankarran](https://twitter.com/dankarran)
  * https://www.dankarran.com
-
-## Data Sources
-
-See `README.md` file in each data directory.
 
 ## Disclaimer
 
