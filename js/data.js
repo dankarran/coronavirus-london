@@ -4,7 +4,7 @@ let data = {
 
     /* Extrapolation setup */
     displayCaseExtrapolation: true,
-    fatality: 2,
+    fatality: 1,
     fatalityOptions: [
         {
             value: 0.1,
