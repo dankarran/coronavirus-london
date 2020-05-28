@@ -57,7 +57,9 @@
                                         <div class="form-group">
                                             <label for="fatality">Estimated fatality rate</label>
                                             <select class="form-control" id="fatality" v-model="fatality" v-on:change="updateExtrapolation">
-                                                <option v-for="option in fatalityOptions" :value="option.value">{{ option.label }}</option>
+                                                <optgroup v-for="optgroup in fatalityOptions" :label="optgroup.label">
+                                                    <option v-for="option in optgroup.options" :value="option.value">{{ option.label }}</option>
+                                                </optgroup>
                                             </select>
                                         </div>
                                     </div>
@@ -89,7 +91,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="stat">
-                                            {{ stats.cases }}
+                                            {{ (parseInt(stats.cases)).toLocaleString() }}
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +103,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="stat">
-                                            {{ stats.deaths }}
+                                            {{ parseInt(stats.deaths).toLocaleString() }}
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +117,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="stat">
-                                            {{ stats.casesExtrapolated }}
+                                            {{ parseInt(stats.casesExtrapolated).toLocaleString() }}
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +129,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="stat">
-                                            {{ stats.populationPercent }}%
+                                            {{ parseInt(stats.populationPercent).toLocaleString() }}%
                                         </div>
                                     </div>
                                 </div>
@@ -141,13 +143,22 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="stat">
-                                            {{ stats.casesExtrapolated - stats.cases }}
+                                            {{ (stats.casesExtrapolated - stats.cases).toLocaleString() }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
-
+                                <div class="card">
+                                    <div class="card-header">
+                                        % of cases counted
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="stat">
+                                            {{ (stats.cases / stats.casesExtrapolated * 100).toFixed(1) }}%
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

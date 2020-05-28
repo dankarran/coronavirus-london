@@ -1,78 +1,129 @@
 let data = {
 
-    dataUpdated: '22 May 2020',
+    dataUpdated: '28 May 2020',
 
     /* Extrapolation setup */
     displayCaseExtrapolation: true,
     fatality: 1,
     fatalityOptions: [
         {
-            value: 0.1,
-            label: '0.1%'
+            'label': 'Low estimates',
+            'options': [
+                {
+                    value: 0.1,
+                    label: '0.1%'
+                },
+                {
+                    value: 0.2,
+                    label: '0.2%'
+                },
+                {
+                    value: 0.3,
+                    label: '0.3%'
+                },
+                {
+                    value: 0.4,
+                    label: '0.4%'
+                }
+            ]
         },
         {
-            value: 0.2,
-            label: '0.2%'
+            'label': 'More likely estimates',
+            'options': [
+                {
+                    value: 0.5,
+                    label: '0.5%'
+                },
+                {
+                    value: 0.6,
+                    label: '0.6%'
+                },
+                {
+                    value: 0.7,
+                    label: '0.7%'
+                },
+                {
+                    value: 0.8,
+                    label: '0.8%'
+                },
+                {
+                    value: 0.9,
+                    label: '0.9%'
+                },
+                {
+                    value: 1,
+                    label: '1%'
+                },
+                {
+                    value: 1.1,
+                    label: '1.1%'
+                },
+                {
+                    value: 1.2,
+                    label: '1.2%'
+                },
+                {
+                    value: 1.3,
+                    label: '1.3%'
+                },
+                {
+                    value: 1.4,
+                    label: '1.4%'
+                },
+                {
+                    value: 1.5,
+                    label: '1.5%'
+                }
+            ]
         },
         {
-            value: 0.3,
-            label: '0.3%'
-        },
-        {
-            value: 0.4,
-            label: '0.4%'
-        },
-        {
-            value: 0.5,
-            label: '0.5%'
-        },
-        {
-            value: 0.6,
-            label: '0.6%'
-        },
-        {
-            value: 0.7,
-            label: '0.7%'
-        },
-        {
-            value: 0.8,
-            label: '0.8%'
-        },
-        {
-            value: 0.9,
-            label: '0.9%'
-        },
-        {
-            value: 1,
-            label: '1%'
-        },
-        {
-            value: 1.5,
-            label: '1.5%'
-        },
-        {
-            value: 2,
-            label: '2%'
-        },
-        {
-            value: 3,
-            label: '3%'
-        },
-        {
-            value: 4,
-            label: '4%'
-        },
-        {
-            value: 5,
-            label: '5%'
-        },
-        {
-            value: 10,
-            label: '10%'
-        },
-        {
-            value: 15,
-            label: '15%'
+            'label': 'High estimates',
+            'options': [
+                {
+                    value: 1.6,
+                    label: '1.6%'
+                },
+                {
+                    value: 1.7,
+                    label: '1.7%'
+                },
+                {
+                    value: 1.8,
+                    label: '1.8%'
+                },
+                {
+                    value: 1.9,
+                    label: '1.9%'
+                },
+                {
+                    value: 2,
+                    label: '2%'
+                },
+                {
+                    value: 2.5,
+                    label: '2.5%'
+                },
+                {
+                    value: 3,
+                    label: '3%'
+                },
+                {
+                    value: 4,
+                    label: '4%'
+                },
+                {
+                    value: 5,
+                    label: '5%'
+                },
+                {
+                    value: 10,
+                    label: '10%'
+                },
+                {
+                    value: 15,
+                    label: '15%'
+                }
+            ]
         }
     ],
     delay: 21,
@@ -207,7 +258,12 @@ let data = {
             '2020-05-19',
             '2020-05-20',
             '2020-05-21',
-            '2020-05-22'
+            '2020-05-22',
+            '2020-05-23',
+            '2020-05-24',
+            '2020-05-25',
+            '2020-05-26',
+            '2020-05-27'
         ],
         datasets: []
     },

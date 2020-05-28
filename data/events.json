@@ -53,5 +53,10 @@
     "date": "2020-05-13",
     "display_at": 0,
     "description": "Lockdown easing to allow unlimited exercise and meeting 1 person"
+  },
+  {
+    "date": "2020-05-28",
+    "display_at": 0,
+    "description": "NHS Test and Trace system goes live"
   }
 ]

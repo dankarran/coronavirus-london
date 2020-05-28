@@ -197,7 +197,7 @@
   },
   {
     "date": "2020-03-21",
-    "deaths_occurence": 49
+    "deaths_occurence": 50
   },
   {
     "date": "2020-03-22",
@@ -221,7 +221,7 @@
   },
   {
     "date": "2020-03-27",
-    "deaths_occurence": 129
+    "deaths_occurence": 130
   },
   {
     "date": "2020-03-28",
@@ -233,7 +233,7 @@
   },
   {
     "date": "2020-03-30",
-    "deaths_occurence": 148
+    "deaths_occurence": 140
   },
   {
     "date": "2020-03-31",
@@ -381,7 +381,7 @@
   },
   {
     "date": "2020-05-06",
-    "deaths_occurence": 34
+    "deaths_occurence": 35
   },
   {
     "date": "2020-05-07",
@@ -405,7 +405,7 @@
   },
   {
     "date": "2020-05-12",
-    "deaths_occurence": 16
+    "deaths_occurence": 17
   },
   {
     "date": "2020-05-13",
@@ -417,11 +417,11 @@
   },
   {
     "date": "2020-05-15",
-    "deaths_occurence": 16
+    "deaths_occurence": 18
   },
   {
     "date": "2020-05-16",
-    "deaths_occurence": 13
+    "deaths_occurence": 14
   },
   {
     "date": "2020-05-17",
@@ -433,14 +433,38 @@
   },
   {
     "date": "2020-05-19",
-    "deaths_occurence": 10
-  },
-  {
-    "date": "2020-05-20",
     "deaths_occurence": 13
   },
   {
+    "date": "2020-05-20",
+    "deaths_occurence": 19
+  },
+  {
     "date": "2020-05-21",
-    "deaths_occurence": 1
+    "deaths_occurence": 12
+  },
+  {
+    "date": "2020-05-22",
+    "deaths_occurence": 10
+  },
+  {
+    "date": "2020-05-23",
+    "deaths_occurence": 5
+  },
+  {
+    "date": "2020-05-24",
+    "deaths_occurence": 7
+  },
+  {
+    "date": "2020-05-25",
+    "deaths_occurence": 7
+  },
+  {
+    "date": "2020-05-26",
+    "deaths_occurence": 11
+  },
+  {
+    "date": "2020-05-27",
+    "deaths_occurence": 2
   }
 ]
