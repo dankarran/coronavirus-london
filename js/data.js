@@ -73,12 +73,7 @@ let data = {
                 {
                     value: 1.5,
                     label: '1.5%'
-                }
-            ]
-        },
-        {
-            'label': 'High estimates',
-            'options': [
+                },
                 {
                     value: 1.6,
                     label: '1.6%'
@@ -98,7 +93,12 @@ let data = {
                 {
                     value: 2,
                     label: '2%'
-                },
+                }
+            ]
+        },
+        {
+            'label': 'High estimates',
+            'options': [
                 {
                     value: 2.5,
                     label: '2.5%'
