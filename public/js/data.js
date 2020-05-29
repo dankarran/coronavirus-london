@@ -328,6 +328,10 @@ let data = {
                             label += ': ';
                         }
                         label += tooltipItem.yLabel;
+
+                        if (data.datasets[tooltipItem.datasetIndex].yAxisID === 'right') {
+                            label += '%';
+                        }
                     }
 
                     return label;
@@ -418,6 +422,27 @@ let data = {
                             pointRadius: 0,
                             yAxisID: 'right',
                             order: 5
+                        }
+                    }
+                ]
+            },
+            {
+                url: './data/phe/seroprevalence.json',
+                key: 'date',
+                fields: [
+                    {
+                        name: 'percent',
+                        label: 'Blood donor seroprevalence',
+                        options: {
+                            type: 'line',
+                            backgroundColor: '#fff',
+                            borderColor: '#17a2b8',
+                            borderWidth: 2,
+                            fill: false,
+                            pointRadius: 0,
+                            spanGaps: true,
+                            yAxisID: 'right',
+                            order: 6
                         }
                     }
                 ]
