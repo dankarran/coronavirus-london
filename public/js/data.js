@@ -446,6 +446,25 @@ let data = {
                         }
                     }
                 ]
+            },
+            {
+                url: './data/nhs/people-in-hospital.json',
+                key: 'date',
+                fields: [
+                    {
+                        name: 'count',
+                        label: 'People in hospital',
+                        options: {
+                            type: 'line',
+                            backgroundColor: '#fff',
+                            borderColor: '#ff3835',
+                            borderWidth: 2,
+                            fill: false,
+                            pointRadius: 0,
+                            order: 7
+                        }
+                    }
+                ]
             }
         ]
     },
